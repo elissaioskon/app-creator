@@ -1,0 +1,5 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# Run only changed tests and do not watch them
+npm run test -- --watchAll=false --onlyChanged

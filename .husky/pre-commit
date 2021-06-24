@@ -1,0 +1,7 @@
+#!/bin/sh
+# better to create file pre-comit using command: npm husky add .husky/pre-commit that makes pre-commit file executable(755)
+. "$(dirname "$0")/_/husky.sh"
+
+#  --allow-empty param what it does is allows empty commits when tasks revert all staged changes
+npm run lint:staged --allow-empty
+
